@@ -40,6 +40,7 @@ html,body{
     width: 100%;
   }
   .image-container{
+    margin-top: 65px;
     width: 100%;
     height: 80vh;
     display: flex;
@@ -81,7 +82,7 @@ html,body{
   }
   /* Number text (1/3 etc) */
   .numbertext {
-    color: #eee4e4;
+    color: #0e0101;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
@@ -121,4 +122,4 @@ html,body{
   }
   @media only screen and (max-width: 500px) {
     .prev, .next,.text {font-size: 14px}
-  }
+  }}

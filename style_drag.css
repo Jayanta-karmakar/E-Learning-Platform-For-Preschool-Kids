@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #c0ccbf;
+  color: #111;
+}
+
+.draggable-elements {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.draggable {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  margin: 0rem 0.5rem;
+  cursor: move;
+  transition: opacity 0.2s;
+}
+
+.draggable:hover {
+  opacity: 0.5;
+}
+
+.droppable-elements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 40px;
+  margin-top: 100px;
+  justify-items: center;
+  align-items: center;
+}
+.droppable {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 3px dashed #111;
+  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+.droppable span {
+  font-size: 1.25rem;
+  pointer-events: none;
+  /* The element is never the target of pointer events */
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+  /* background-color: #bee3f0; */
+  border-width: 5px;
+  transform: scale(1.1);
+}
+
+.droppable.dropped {
+  border-style: solid;
+  color: #fff;
+}
+
+.droppable.dropped span {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.droppable.dropped i {
+  pointer-events: none;
+}
+
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  .draggable-elements {
+    margin: 1.5rem;
+  }
+}
+.btn1 {
+  padding: 20px;
+  font-size: 30px;
+  background-color: rgb(38, 254, 4);
+  color: rgb(0, 0, 0);
+  text-shadow:2px 2px #fffefe;
+  border: 10cm;
+  border-color: #0a0a0a;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px black;
+  text-transform: uppercase;
+  cursor: pointer;
+  ;
+}
+
+.btn1:hover {
+  background-color: rgb(1, 127, 62);
+  transform: scale(1.1);
+}
+.btn__container_learningh {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  margin-top: 160px;
+  margin-bottom: 150px;
+  justify-items: center;
+  align-items: center;
+
+}

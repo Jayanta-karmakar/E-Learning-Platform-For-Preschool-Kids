@@ -1,0 +1,77 @@
+.rihide {
+    display: none;
+}
+
+.riactivity img {
+    cursor: pointer;
+    width: 80%;
+    align-items: center;
+    margin-left: 60%;
+
+}
+
+.ricorrect {
+    position: relative;
+    padding: 1.00rem 1.70rem;
+    margin: .50rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #155724;
+    font-size: 60px;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    width: 100%
+
+}
+
+.riincorrect {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #721c24;
+    font-size: 69px;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    width: 100%
+}
+
+.riitem {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin: -0.5rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #111;
+    font-size: 50px;
+    background-color: #efefef;
+    border-color: #dfdfdf;
+    width: 100%
+}
+.btn {
+    padding: 20px;
+    font-size: 25px;
+    background-color: rgb(2, 232, 221);
+    color: rgb(18, 16, 18);
+    text-shadow:2px 2px #fffefe;
+    border: 10cm;
+    border-color: #0a0a0a;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px black;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 40%;
+  }
+  
+  .btn:hover {
+    background-color: rgb(41, 38, 41);
+    transform: scale(1.1);
+  }
+  
+  .btn__container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+  }

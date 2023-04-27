@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        LearnEra
+    </title>
+    <link rel="icon" href="./pictures/logo.jpg" type="image/x-icon" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            line-height: 15vh;
+            background-color: dodgerblue;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            font-style: oblique;
+            text-shadow: 0 1px 0 #0b0b0b,
+                0 2px 0 #000000,
+                0 3px 0 #070707,
+                0 4px 0 #080808,
+                0 30px 5px rgba(0, 0, 0, .1);
+        }
+
+        section {
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("./pictures/guess.gif");
+        }
+
+        .gameArea {
+            width: 50%;
+            height: 400px;
+            padding: 20px 0;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 6px -6px black;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        input {
+            width: 40%;
+            padding: 15px 0;
+            text-align: center;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            background-color: whitesmoke;
+            color: black;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+
+        button {
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+            border: #2f3542;
+            margin-top: 10px;
+            color: #eb4d4b;
+        }
+
+        button.btn {
+            font-weight: 600;
+            padding: 1rem 2rem;
+            background: white;
+            text-transform: uppercase;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.65, -0.25, 0.25, 1.95);
+        }
+
+        button.btn:hover,
+        button.btn:focus,
+        button.btn:active {
+            letter-spacing: 0.125rem;
+            word-spacing: 0.2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Guess the word</h1>
+    </header>
+    <section>
+        <div class="gameArea">
+            <h3 class="msg"></h3>
+            <input type="text" class="hidden">
+            <button class="btn">Click here to start</button>
+        </div>
+    </section>
+    <script>
+        const msg = document.querySelector('.msg');
+        const guess = document.querySelector('input');
+        const btn = document.querySelector('.btn');
+        let newWords = "";
+        let randWords = "";
+        let play = false;
+        let words = ['cat', 'dog', 'house', 'river', 'room', 'word', 'pond', 'india', 'girl', 'bird']
+        const createNewWords = () => {
+            let ranNum = Math.floor(Math.random() * words.length);
+            let newTempWords = words[ranNum];
+            return newTempWords;
+        }
+        const scrambleWords = (arr) => {
+            for (let i = arr.length - 1; i > 0; i--) {
+                let temp = arr[i];
+                let j = Math.floor(Math.random() * (i + 1));
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            return arr;
+        }
+        btn.addEventListener('click', function () {
+            if (!play) {
+                play = true;
+                btn.innerHTML = "Guess";
+                guess.classList.toggle('hidden');
+                newWords = createNewWords();
+                randWords = scrambleWords(newWords.split("")).join("");
+                msg.innerHTML = ` Guess the word: ${randWords}`;
+            }
+            else {
+                let tempWord = guess.value;
+                if (tempWord === newWords) {
+                    play = false;
+                    msg.innerHTML = `Awesome ! The word is ${newWords} `;
+
+
+
+                    btn.innerHTML = "Start Again";
+                    guess.classList.toggle('hidden');
+                    guess.value = "";
+                }
+                else {
+                    msg.innerHTML = `Sorry . Try again ${randWords}`;
+                }
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

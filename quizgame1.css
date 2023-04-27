@@ -1,0 +1,341 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    background-color: rgb(251, 251, 251);
+  }
+  
+  .headline_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    z-index: 100;
+  }
+  
+  h1 {
+    text-align: center;
+    text-shadow: 2px 2px #190606;
+    display: block;
+    font-size: 2em;
+    /*margin-top: 0.67em;
+    margin-left: 24%;
+    margin-right: 0;*/
+    margin: auto;
+    font-weight: bold;
+    color: rgb(248, 248, 250);
+    font-size: 50px;
+    background-color: rgb(130, 27, 142);
+    display: inline-flex;
+    font-family: "sans-serif";
+    padding: 2px 0px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px black;
+  
+  }
+  
+  .myVideo {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -150;
+    height: 122vh;
+    width: 122vw;
+  }
+  
+  .red img {
+    width: 95px;
+    float: left;
+    padding-left: 2%;
+    padding-top: 1%;
+    filter: invert(1);
+    position: absolute;
+  }
+  
+  .nav_bar {
+    padding: 5px 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .nav_bar img {
+    width: 95px;
+    float: left;
+    padding-left: 2%;
+    padding-top: 3%;
+    filter: invert(1);
+  }
+  
+  .login__btn {
+    padding: 5px 15px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: rgba(88, 88, 88, 0.7);
+    margin-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .register__btn {
+    padding: 5px 15px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: rgba(88, 88, 88, 0.7);
+    text-transform: uppercase;
+  }
+  
+  .login__btn:hover {
+    padding: 5px 15px;
+    font-size: 20px;
+    background-color: rgba(45, 45, 45, 0.2);
+  }
+  
+  .register__btn:hover {
+    padding: 5px 15px;
+    font-size: 20px;
+    background-color: rgba(45, 45, 45, 0.2);
+  }
+  
+  .main__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+  }
+  
+  .btn1 {
+    padding: 40px;
+    font-size: 45px;
+    background-color: rgb(130, 27, 142);
+    background-image: url("./pictures/fruit.jpg");
+    color: rgb(62, 2, 69);
+    text-shadow:2px 2px #fffefe;
+    border: 10cm;
+    border-color: #0a0a0a;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px black;
+    text-transform: uppercase;
+    cursor: pointer;
+    ;
+  }
+  
+  .btn1:hover {
+    background-color: rgb(41, 38, 41);
+    transform: scale(1.1);
+  }
+  .btn2 {
+    padding: 40px;
+    font-size: 45px;
+    background-color: rgb(130, 27, 142);
+    background-image: url("./pictures/flower.jpg");
+    color: rgb(62, 2, 69);
+    text-shadow:2px 2px #fffefe;
+    border: 10cm;
+    border-color: #0a0a0a;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px black;
+    text-transform: uppercase;
+    cursor: pointer;
+    ;
+  }
+  
+  .btn2:hover {
+    background-color: rgb(41, 38, 41);
+    transform: scale(1.1);
+  }
+  .btn3 {
+    padding: 40px;
+    font-size: 45px;
+    background-color: rgb(130, 27, 142);
+    background-image: url("./pictures/animal.jpg");
+    color: rgb(62, 2, 69);
+    text-shadow:2px 2px #fffefe;
+    border: 10cm;
+    border-color: #0a0a0a;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px black;
+    text-transform: uppercase;
+    cursor: pointer;
+    ;
+  }
+  
+  .btn3:hover {
+    background-color: rgb(41, 38, 41);
+    transform: scale(1.1);
+  }
+  .btn4 {
+    padding: 40px;
+    font-size: 45px;
+    background-color: rgb(130, 27, 142);
+    background-image: url("./pictures/bird.jpg");
+    color: rgb(62, 2, 69);
+    text-shadow:2px 2px #fffefe;
+    border: 10cm;
+    border-color: #0a0a0a;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px black;
+    text-transform: uppercase;
+    cursor: pointer;
+    ;
+  }
+  
+  .btn4:hover {
+    background-color: rgb(41, 38, 41);
+    transform: scale(1.1);
+  }
+  
+  .btn__container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .myquiz {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./pictures/quiz-time.gif");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  
+  /*learning page*/
+  .btn__container_learningh {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    margin-top: 100px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* number */
+  .mynumber {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./pictures/number.gif");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  
+  .number__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+  }
+  
+  .number__container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* learn */
+  
+  /*video*/
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .video-c {
+    width: 100%;
+  }
+  
+  .c-video {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* color */
+  .mycolor {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./pictures/color.gif");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  
+  /* alphabet */
+  .myalphabet {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./pictures/alphabet.gif");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  
+  /*identification */
+  .myidentify {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./pictures/identify.gif");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: -10;
+  
+  }
+  
+  /* game */
+  .mygame {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./pictures/game.gif");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  
+  /*identification */
+  .mypuzzle {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./pictures/puzzle.gif");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  
+  /* Audion Button  */
+  .audio_button {
+    padding: 20px;
+    font-size: 25px;
+    background-color: rgb(11, 102, 247);
+    color: white;
+    border: 0cm;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px black;
+    text-transform: uppercase;
+    margin-left: 10%;
+  }

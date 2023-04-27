@@ -98,7 +98,7 @@ h1{
 .side-bar{
     width: 50px;
     height: 100vh;
-    background: linear-gradient(#00545d,#000729);
+    background: linear-gradient(#baaceb,rgb(203 165 169 / 25%));
     position: absolute;
     right: 0;
     top: 0;

@@ -1,5 +1,9 @@
 <!DOCTYPE htmlregister__btn>
 <html lang="en">
+<title>
+    LearnEra
+</title>
+<link rel="icon" href="./pictures/logo.jpg" type="image/x-icon" />
 
 <head>
     <meta charset="UTF-8" />
@@ -7,11 +11,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="color-learn-style.css">
+    <link rel="stylesheet" href="style1.css">
     <title>Child website Design</title>
 </head>
 
 
 <body>
+    <audio id="RED">
+        <source src="./Audio/color/RED.mp3" type="audio/ogg">
+    </audio>
+    <audio id="ORANGE">
+        <source src="./Audio/color/ORANGE.mp3" type="audio/ogg">
+    </audio>
+    <audio id="GREEN">
+        <source src="./Audio/color/GREEN.mp3" type="audio/ogg">
+    </audio>
+    <audio id="YELLOW">
+        <source src="./Audio/color/YELLOW.mp3" type="audio/ogg">
+    </audio>
+    <audio id="BLUE">
+        <source src="./Audio/color/BLUE.mp3" type="audio/ogg">
+    </audio>
+    <audio id="PURPLE">
+        <source src="./Audio/color/PURPLE.mp3" type="audio/ogg">
+    </audio>
+
+
+
+
     <div class="mynumber">
         <div class="red">
             <img src="./pictures/logo.jpg" alt="Logo">
@@ -21,39 +48,45 @@
                 <div class="image-container">
                     <div class="numbertext">1 / 6</div>
                     <img src="./pictures/color-learn/red.jpg" alt="Image">
+                    <button onclick="play_RED()" type="button" class="audio_button">Play RED</button> 
                 </div>
             </div>
             <div class="slider">
                 <div class="image-container">
                     <div class="numbertext">2 / 6</div>
                     <img src="./pictures/color-learn/orange.jpg" alt="Image">
+                    <button onclick="play_ORANGE()" type="button" class="audio_button">Play ORANGE</button> 
                 </div>
             </div>
             <div class="slider">
                 <div class="image-container">
                     <div class="numbertext">3 / 6</div>
                     <img src="./pictures/color-learn/green.jpg" alt="Image">
+                    <button onclick="play_GREEN()" type="button" class="audio_button">Play GREEN</button> 
                 </div>
             </div>
             <div class="slider">
                 <div class="image-container">
                     <div class="numbertext">4 / 6</div>
                     <img src="./pictures/color-learn/yellow.jpg" alt="Image">
+                    <button onclick="play_YELLOW()" type="button" class="audio_button">Play YELLOW</button> 
                 </div>
             </div>
             <div class="slider">
                 <div class="image-container">
                     <div class="numbertext">5 / 6</div>
                     <img src="./pictures/color-learn/blue.jpg" alt="Image">
+                    <button onclick="play_BLUE()" type="button" class="audio_button">Play BLUE</button> 
                 </div>
             </div>
             <div class="slider">
                 <div class="image-container">
                     <div class="numbertext">6 / 6</div>
                     <img src="./pictures/color-learn/purple.jpg" alt="Image">
+                    <button onclick="play_PURPLE()" type="button" class="audio_button">Play PURPLE</button> 
                 </div>
             </div>
-        
+
             <div class="prev-button" onclick="plusSlides(-1)">&#10094;</div>
             <div class="next-button" onclick="plusSlides(1)">&#10095;</div>
         </div>
@@ -65,7 +98,7 @@
             <div class="dot" onclick="currentSlide(5)"></div>
             <div class="dot" onclick="currentSlide(6)"></div>
         </div>
-        <script src="number-learn.js"></script>
+        <script src="color-learn.js"></script>
     </div>
 </body>
 

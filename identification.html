@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+  LearnEra
+</title>
+<link rel="icon" href="./pictures/logo.jpg" type="image/x-icon" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assStyle.css" />
+</head>
+
+<body>
+  <audio id="myAudio">
+    <source src="please try again.mpeg" type="audio/mpeg" />
+  </audio>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <h2>
+          <span><i class="fa fa-trophy" aria-hidden="true"></i></span> Quick
+          Test
+        </h2>
+        <nav>
+          <ul>
+            <li class="current">
+              <a href="identification.html">Identification</a>
+            </li>
+            <li><a href="add.html">Add</a></li>
+            <li><a href="subtract.html">Subtract</a></li>
+            <li><a href="multiply.html">Multiply</a></li>
+            <li><a href="divide.html">Divide</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper" style="grid-template-columns: 60% 40%;">
+    <div class="equation">
+      <div>
+        <h1 id="num1" style="color: #bd2e8d; font-size: 80px">Question 1</h1>
+        <h1 style="color: #39b9a8; font-size: 80px"">?</h1>
+        </div>
+        <div class=" score">
+          <h6>score:</h6>
+          <h6 id="current_score">0</h6>
+      </div>
+      <button class="btn">Reset</button>
+      <h5 class="try_again hidden">Please try again...!!</h5>
+    </div>
+    <div class="answer-options">
+      <div class="options" style="background-color: #fe4a49">
+        <h1 id="option1">1</h1>
+      </div>
+      <div class="options" style="background-color: #2ab7ca">
+        <h1 id="option2">2</h1>
+      </div>
+      <div class="options" style="background-color: #fed766">
+        <h1 id="option3">3</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascript/identification.js"></script>
+</body>
+
+</html>

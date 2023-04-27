@@ -1,20 +1,85 @@
-<!DOCTYPE htmlregister__btn>
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>
+    LearnEra
+</title>
+<link rel="icon" href="./pictures/logo.jpg" type="image/x-icon" />
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./pictures/logo.jpg" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style1.css" />
-    <title>Child website Design</title>
+    <title>Image Puzzle</title>
+    <link href="style_puzzle.css" rel="stylesheet" />
+    <link href="image-puzzle.css" rel="stylesheet" />
+    <script src="image-puzzle.js"></script>
 </head>
 
 <body>
-    <div class="mypuzzle">
-        <div class="red">
-            <img src="./pictures/logo.jpg" alt="Logo">
+    <div id="collage">
+        <h2>Image Puzzle</h2>
+        <hr />
+        <div id="playPanel" style="padding:5px;display:none;">
+            <h3 id="imgTitle"></h3>
+            <hr />
+            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>Steps:</div>
+                        <div id="stepCount" class="stepCount">0</div>
+                    </div>
+                    <div id="timeBox">
+                        Time Taken: <span id="timerPanel"></span> secs
+                    </div>
+                    <img id="actualImage" />
+                    <div>Re-arrange to create a picture like this.</div>
+
+
+
+
+                </div>
+            </div>
         </div>
+
+        <div id="gameOver" style="display:none;">
+            <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+                <h2 style="text-align:center;">Game Over!!</h2>
+                Congratulations!! <br /> You have completed this picture.
+                <br /> Steps: <span id="stepCount" class="stepCount">0</span> steps.
+                <br /> Time Taken: <span class="timeCount">0</span> seconds<br />
+                <div style="background-image: url('./pictures/puzzle/congrats-14.gif'); height:250px; width: 260px;">
+                    <button type="button" onclick="window.location.reload(true);">Play Again</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="btn">
+            <button id="btnRule" type="button" class="btn1" onclick="rules();">Rules</button>
+            <button type="button" class="btn1" onclick="window.location.reload(true);">Another Photo</button>
+
+        </div>
+
+        <script>
+            var images = [
+                { src: 'pictures/puzzle/cat.jpg', title: 'CAT' },
+                { src: 'pictures/puzzle/ball.jpg', title: 'BALL' },
+                { src: 'pictures/puzzle/house.png', title: 'HOUSE' }
+
+            ];
+
+            window.onload = function () {
+                var gridSize = 4;
+                imagePuzzle.startGame(images);
+            };
+            function restart() {
+                var gridSize = 4;
+                imagePuzzle.startGame(images);
+            }
+            function rules() {
+                alert('Re arrange the image parts in a way that it correctly forms the picture. \nThe no. of steps taken will be counted.');
+            }
+            function about() {
+                alert('It is a real life object');
+            }
+        </script>
     </div>
 </body>
 

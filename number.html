@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style1.css" />
-    <title>Child website Design</title>
+    <title>LearnEra</title>
 </head>
 
 <body>
@@ -15,16 +15,40 @@
         <div class="red">
             <img src="./pictures/logo.jpg" alt="Logo">
         </div>
-        <h1>  𒆜 NUMBER LEARNING 𒆜 </h1>
+
+        <div class="headline_container">
+            <h1> 𒆜 NUMBER LEARNING 𒆜 </h1>
+        </div>
 
         <div class="number__content">
             <div class="number__container">
-                <a href="number-learn.html"><button class="btn">Learn</button></a>
-                <a href="number-video.html"><button class="btn">Video</button></a>
-                <a href="number_test2.html"><button class="btn">Test</button></a>
+                <a href="number-learn.html"><button class="btn" id="learn" type="button"
+                        onclick="clickEvent1()">Learn</button></a>
+                <a href="number-video.html"><button class="btn" id="video" type="button"
+                        onclick="clickEvent()">Video</button></a>
+                <a href="number_test2.html"><button class="btn" id="video" type="button"
+                        onclick="clickEvent()">Test</button></a>
             </div>
         </div>
     </div>
+    <script>
+        const test1 = document.getElementById('test');
+        window.addEventListener("load", function () {
+            test1.disabled = true;
+        });
+        function checkState() {
+            if (test1.disabled === false) {
+                //alert("Not Disabled");
+                window.location.href = "./number_test2.html";
+            }
+        }
+        function clickEvent() {
+            test1.disabled = false;
+        }
+        function clickEvent1() {
+            test1.disabled = false;
+        }
+    </script>
 </body>
 
 </html>
