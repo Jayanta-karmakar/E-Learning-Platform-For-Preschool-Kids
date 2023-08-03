@@ -9,7 +9,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assStyle.css" />
+  <link rel="stylesheet" href="identification_assStyle.css" />
+  <link rel="stylesheet" href="identification_popup.css" />
 </head>
 
 <body>
@@ -41,14 +42,19 @@
   <div class="wrapper" style="grid-template-columns: 60% 40%;">
     <div class="equation">
       <div>
-        <h1 id="num1" style="color: #bd2e8d; font-size: 80px">Question 1</h1>
-        <h1 style="color: #39b9a8; font-size: 80px"">?</h1>
+        <h1 id="num1" style="color: #bd2e8d; font-size: 60px">Question 1</h1>
+        <h1 style="color: #39b9a8; font-size: 50px"">?</h1>
         </div>
         <div class=" score">
           <h6>score:</h6>
           <h6 id="current_score">0</h6>
       </div>
-      <button class="btn">Reset</button>
+
+        <!--- Bothe Buttons -->
+      <div class="button-container">
+        <button class="btn">Reset</button>
+        <button id="submit" class="btn">Submit</button>
+      </div>
       <h5 class="try_again hidden">Please try again...!!</h5>
     </div>
     <div class="answer-options">
@@ -60,6 +66,18 @@
       </div>
       <div class="options" style="background-color: #fed766">
         <h1 id="option3">3</h1>
+      </div>
+    </div>
+  </div>
+
+  <!--- popup window code -->
+  <div id="popup" class="window">
+    <div class="form">
+      <a class="close" id="popUpClose" href="#">&times;</a>
+      <div id="content">
+        <span> Test Result </span>
+        <p id="offer"></p><br>
+        <a href="home.html" class="link">Done</a>
       </div>
     </div>
   </div>

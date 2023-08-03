@@ -1,0 +1,118 @@
+body
+{
+	margin: auto;
+	padding: auto;
+}
+
+.button-container {
+    display: flex; /* display the buttons side by side */
+    justify-content: center; /* align the buttons to the left and right edges */
+    width: 100%; /* set the container width to 100% to take up the full width of the parent element */
+}
+.window 
+{
+	position: absolute;
+	top: 100px;
+	bottom: 0;
+    left: 	0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+	transition: opacity 200ms;
+    visibility: hidden;
+    /* display: none; */
+}
+
+.window:target
+{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+.form
+{
+	width: 100%;
+	margin: 95px auto;
+	padding: 20px;
+	background: #444;
+	border: 1px solid #666;
+	width: 400px;
+    height: 200px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+	position: relative;
+}
+
+.close 
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    right: 20px;
+    opacity: 100;
+    font-size: 44px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+#content
+{
+	text-align: center;
+}
+
+span
+{
+	font-size: 40px;
+	font-weight: bold;
+	color: #eee;
+}
+
+#offer
+{
+	color: #20eb20;
+	/* font-size: 12px; */
+    opacity: 100;
+    font-size: 74px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link {
+    display: inline-block;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .link:hover {
+    background-color: #003366;
+  }
+
+.input
+{
+	text-align: center;
+	background-color: #eee;
+	border: 0 solid;
+	font-size: 16px;
+	margin-top: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.subscribe
+{
+	color: white;
+	text-align: center;
+	background-color: #d1e750;
+	border: 0 solid;
+	font-size: 16px;
+	margin-top: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+

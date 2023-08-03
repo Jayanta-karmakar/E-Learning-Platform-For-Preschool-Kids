@@ -5,6 +5,7 @@ const option1 = document.getElementById("option1"),
 var answer = 0;
 
 const btn = document.querySelector('.btn');
+
 const try_again = document.querySelector('.try_again')
 
 function generate_equation() {
@@ -30,22 +31,36 @@ function generate_equation() {
   option2.innerHTML = switchAnswers[1];
   option3.innerHTML = switchAnswers[2];
 };
+
 var score = 0;
 function addscore() {
   score += 5;
   document.getElementById('current_score').textContent = score;
   try_again.classList.add('hidden');
-  console.log(score);
-
 }
-
 function subtractscore() {
   score -= 1;
   document.getElementById('current_score').textContent = score;
   try_again.classList.remove('hidden');
-  console.log(score);
 }
-console.log(score);
+
+// popup function 
+
+submit.addEventListener("click", function () {
+  var popUpVal = document.getElementById('popup');
+  popUpVal.style.visibility = "hidden";
+  if (popUpVal.style.visibility === 'hidden') {
+    document.getElementById("offer").innerHTML = `Score ${score}`
+    popUpVal.style.visibility = "visible";
+  }
+});
+
+popUpClose.addEventListener("click", function () {
+  var popUpVal = document.getElementById('popup');
+  if (popUpVal.style.visibility === 'visible') {
+    popUpVal.style.visibility = "hidden";
+  }
+})
 
 option1.addEventListener("click", function () {
   if (option1.innerHTML == answer) {
@@ -84,33 +99,4 @@ btn.addEventListener('click', function () {
   document.getElementById('current_score').textContent = 0;
 })
 generate_equation()
-
-/* // Open the IndexedDB database
-const dbRequest = window.indexedDB.open('myDatabase', 1);
-
-// Define the object store schema
-dbRequest.onupgradeneeded = event => {
-  const db = event.target.result;
-  const objectStore = db.createObjectStore('scores', { keyPath: 'id', autoIncrement: true });
-  objectStore.createIndex('score', 'score', { unique: false });
-};
-
-// Retrieve the scores from the web page and add them to the database
-dbRequest.onsuccess = event => {
-  const db = event.target.result;
-  const transaction = db.transaction(['scores'], 'readwrite');
-  const objectStore = transaction.objectStore('scores');
-
-  // Retrieve the scores from the web page and add them to the database
-  const scores = document.querySelectorAll('.score');
-  scores.forEach(score => {
-    const value = parseInt(score.innerText);
-    objectStore.add({ score: value });
-  });
-
-  transaction.oncomplete = () => {
-    console.log('Scores added to database.');
-  };
-};
-*/
 

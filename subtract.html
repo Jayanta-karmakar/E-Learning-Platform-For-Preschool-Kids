@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assStyle.css">
+  <link rel="stylesheet" href="subtract_popup.css">
+
   <title>
     LearnEra
   </title>
@@ -50,7 +52,10 @@
         <h6>score:</h6>
         <h6 id="current_score">0</h6>
       </div>
-      <button class="btn">Reset</button>
+      <div class="button-container">
+        <button class="btn">Reset</button>
+        <button id="submit" class="btn">Submit</button>
+      </div>
 
       <h5 class="try_again hidden">Please try again...!!</h5>
 
@@ -66,6 +71,17 @@
       </div>
       <div class="options" style="background-color: #FED766;">
         <h1 id="option3">3</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup" class="window">
+    <div class="form">
+      <a class="close" id="popUpClose" href="#">&times;</a>
+      <div id="content">
+        <span> Test Result </span>
+        <p id="offer"></p><br>
+        <a href="home.html" class="link">Done</a>
       </div>
     </div>
   </div>

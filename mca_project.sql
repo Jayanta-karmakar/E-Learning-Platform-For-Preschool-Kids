@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2022 at 08:45 AM
+-- Generation Time: May 01, 2023 at 08:17 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -24,6 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin_details`
+--
+
+CREATE TABLE `admin_details` (
+  `email` varchar(255) NOT NULL,
+  `password` varchar(23) NOT NULL,
+  `name` char(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin_details`
+--
+
+INSERT INTO `admin_details` (`email`, `password`, `name`) VALUES
+('shreya123@gmail.com', 'Shreya123', 'Shreya');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_details`
 --
 
@@ -39,14 +58,26 @@ CREATE TABLE `user_details` (
 --
 
 INSERT INTO `user_details` (`name`, `email`, `password`, `grade`) VALUES
+('Updated', 'Adrr@gmail.com', 'huhu', 'A'),
+('Moumita', 'asdrd4@gmail.com', 'gygggggg', ''),
 ('ss', 'avd@gmail.com', 'hyu78ff', ''),
+('Banti Karmakar', 'Banti123@gmail.com', '009uuyy', ''),
 ('PP', 'fgt@gmail.com', 'huhh7', ''),
+('JK', 'huhh@gmail.com', 'huhhh777', ''),
 ('shreya', 'huyy7@gmail.com', 'hyhuu8', ''),
-('Suvendu', 'hyh@gmail.com', 'hyh7788', '');
+('Suvendu', 'hyh@gmail.com', 'hyh7788', ''),
+('Monti Roy', 'montiRoy67@gmail.com', 'hyh77', ''),
+('Banti Karmakar', 'Sess444@gmail.com', 'huh78', '');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin_details`
+--
+ALTER TABLE `admin_details`
+  ADD PRIMARY KEY (`email`);
 
 --
 -- Indexes for table `user_details`
